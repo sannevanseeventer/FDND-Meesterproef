@@ -1,0 +1,25 @@
+@use "sass:color";
+
+:root {
+  // Base colors
+  --white: #ffffff;
+  --black: #000000;
+  --grey: #c3c3c3;
+
+  // Backgrounds
+  --berry: #922c5b;
+  --darkpurple: #330c3c;
+  --midpurple: #631b4b;
+  --lightpink: #f4a7c7;
+  --lightorange: #fc9972;
+
+  // Other colors
+  --orange: #ed6e4a;
+  --salmon: #fdb9a5;
+  --coral: #e25969;
+  --lightgreen: #848949;
+  --darkgreen: #62632a;
+
+  // Titles
+  --yellow: #fff2c8;
+}

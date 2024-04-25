@@ -120,9 +120,8 @@ onMount(() => {
     }
     h2 {
         font-family: "Righteous", sans-serif;
-        font-size: 3rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        font-size: 5rem;
+        color: var(--yellow);
     }
     /* img {
         width: 7rem;
