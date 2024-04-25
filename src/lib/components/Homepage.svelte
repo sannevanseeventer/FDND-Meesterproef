@@ -1,7 +1,6 @@
 <script>
-    export let data;
+ export let data;
 import { onMount } from "svelte";
-    import Start from "./Start.svelte";
 
 onMount(() => {
     const container = document.querySelector(".container");
@@ -71,7 +70,6 @@ onMount(() => {
 
 <section>
     <div class="container">       
-        <Start />
 
         <!-- Pages -->
             {#each data.blogPosts as post}
@@ -122,6 +120,7 @@ onMount(() => {
         font-family: "Righteous", sans-serif;
         font-size: 5rem;
         color: var(--yellow);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
     /* img {
         width: 7rem;

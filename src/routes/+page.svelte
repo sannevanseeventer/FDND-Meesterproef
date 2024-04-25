@@ -1,10 +1,10 @@
 <script>
-import PageTitles from "../lib/components/PageTitles.svelte";
+import Homepage from "../lib/components/Homepage.svelte";
 import Button from "../lib/components/Button.svelte";
 
 export let data;
 
 </script>
 
-<PageTitles {data}/>
+<Homepage {data}/>
 <Button />
