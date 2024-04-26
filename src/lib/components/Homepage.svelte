@@ -100,31 +100,9 @@ onMount(() => {
     .container:active {
         cursor: grabbing;
     }
-    .card {
-        position: absolute;
-        cursor: pointer;
-    }
-    .card-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 1.6rem;
-    }
-    h2 {
-        font-family: "Righteous", sans-serif;
-        font-size: 5rem;
-        color: var(--yellow);
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    /* img {
-        width: 7rem;
-        height: auto;
-    } */
     a{
     all: unset;
   }
-
   .link {
     position: absolute;
     font-family: "Righteous", sans-serif;
