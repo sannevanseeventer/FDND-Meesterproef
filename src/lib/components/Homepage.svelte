@@ -72,13 +72,8 @@ onMount(() => {
     <div class="container">       
 
         <!-- Pages -->
-            {#each data.blogPosts as post}
-                <a href="/{post.slug}">
-                    <div class="card" style="top: {post.top}rem; left: {post.left}rem">
-                        <div class="card-container">
-                            <h2>{post.title}</h2>
-                        </div>
-                </a>
+            {#each data.pages as page}
+                <a class="link" style="top: {page.top}rem; left: {page.left}rem;" href={page.url}>{page.title}</a>
             {/each}
     </div>
 </section>
@@ -128,6 +123,14 @@ onMount(() => {
     } */
     a{
     all: unset;
+  }
+
+  .link {
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-size: 5rem;
+    color: var(--yellow);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
 </style>

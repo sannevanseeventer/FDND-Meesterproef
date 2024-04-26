@@ -3,12 +3,9 @@ import { hygraph } from "$lib/utils/hygraph.js";
 
 export async function load() {
   let query = gql`
-    query Page {
-      pages {
+    query Experiences {
+      experiences {
         title
-        left
-        top
-        url
       }
     }
   `;

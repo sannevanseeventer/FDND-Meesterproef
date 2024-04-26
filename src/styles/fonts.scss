@@ -4,3 +4,19 @@ p {
   font-size: 1rem;
   font-family: "Righteous", sans-serif;
 }
+
+li,
+ul {
+  text-decoration: none;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+a {
+  font-size: 1.2rem;
+  font-family: "Righteous", sans-serif;
+  text-decoration: none;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--white);
+}

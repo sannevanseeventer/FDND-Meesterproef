@@ -7,4 +7,4 @@ export let data;
 </script>
 
 <Homepage {data}/>
-<Button />
+<Button {data}/>
