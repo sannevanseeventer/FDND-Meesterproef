@@ -95,6 +95,7 @@
   }
 
   button {
+    display: flex;
     justify-content: right;
     align-items: center;
     font-family: 'Righteous', sans-serif;
