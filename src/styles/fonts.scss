@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Righteous&display=swap");
+@font-face {
+  font-family: "Righteous";
+  src: url("/font/Righteous-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "Righteous", Arial, sans-serif;
+}
 
 p {
   font-size: 1rem;
@@ -17,6 +24,12 @@ a {
   font-family: "Righteous", sans-serif;
   text-decoration: none;
   text-align: left;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   color: var(--white);
+}
+
+h2 {
+  padding-top: 2rem;
+  margin: 0;
+  font-size: 5rem;
 }

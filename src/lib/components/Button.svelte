@@ -1,16 +1,71 @@
 <script>
-  export let data;
+  export let data
+  import { onMount } from "svelte";
+  
+  onMount(() => {
+    const menu = document.querySelector('.menu');
+    const buttonMenu = document.querySelector('.show-links');
+    const buttonInfo = document.querySelector('.show-info');
+    const infoBox = document.querySelector('.info');
+
+    // Hide the menu and info box if JavaScript is enabled
+    menu.classList.add('hidden');
+    buttonMenu.classList.remove('hidden');
+    buttonInfo.classList.remove('hidden');
+
+    buttonMenu.addEventListener('click', function() {
+    menu.classList.toggle('hidden');
+
+      // Hide info box when menu button is clicked
+      if (!menu.classList.contains('hidden')) {
+        infoBox.classList.add('hidden');
+        buttonMenu.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+          <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <g transform="scale(8.53333,8.53333)">
+              <path d="M7,4c-0.25587,0 -0.51203,0.09747 -0.70703,0.29297l-2,2c-0.391,0.391 -0.391,1.02406 0,1.41406l7.29297,7.29297l-7.29297,7.29297c-0.391,0.391 -0.391,1.02406 0,1.41406l2,2c0.391,0.391 1.02406,0.391 1.41406,0l7.29297,-7.29297l7.29297,7.29297c0.39,0.391 1.02406,0.391 1.41406,0l2,-2c0.391,-0.391 0.391,-1.02406 0,-1.41406l-7.29297,-7.29297l7.29297,-7.29297c0.391,-0.39 0.391,-1.02406 0,-1.41406l-2,-2c-0.391,-0.391 -1.02406,-0.391 -1.41406,0l-7.29297,7.29297l-7.29297,-7.29297c-0.1955,-0.1955 -0.45116,-0.29297 -0.70703,-0.29297z"></path>
+            </g>
+          </g>
+        </svg>`; // Change button content to SVG
+        buttonInfo.textContent = "?"; // Change info button text back to "?"
+      } else {
+        buttonMenu.textContent = "Menu"; // Change button text back to "Menu"
+      }
+    });
+
+    buttonInfo.addEventListener('click', function() {
+      infoBox.classList.toggle('hidden');
+      // Hide menu when info button is clicked
+      if (!infoBox.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+        buttonInfo.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+          <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <g transform="scale(8.53333,8.53333)">
+              <path d="M7,4c-0.25587,0 -0.51203,0.09747 -0.70703,0.29297l-2,2c-0.391,0.391 -0.391,1.02406 0,1.41406l7.29297,7.29297l-7.29297,7.29297c-0.391,0.391 -0.391,1.02406 0,1.41406l2,2c0.391,0.391 1.02406,0.391 1.41406,0l7.29297,-7.29297l7.29297,7.29297c0.39,0.391 1.02406,0.391 1.41406,0l2,-2c0.391,-0.391 0.391,-1.02406 0,-1.41406l-7.29297,-7.29297l7.29297,-7.29297c0.391,-0.39 0.391,-1.02406 0,-1.41406l-2,-2c-0.391,-0.391 -1.02406,-0.391 -1.41406,0l-7.29297,7.29297l-7.29297,-7.29297c-0.1955,-0.1955 -0.45116,-0.29297 -0.70703,-0.29297z"></path>
+            </g>
+          </g>
+        </svg>`; // Change button content to SVG
+        buttonMenu.textContent = "Menu"; // Change menu button text back to "Menu"
+      } else {
+        buttonInfo.textContent = "?"; // Change button text back to "?"
+      }
+    });
+  });
 </script>
 
 <section>
   <nav>
-    <input type="checkbox" id="toggle-menu" class="toggle-menu">
-    <label for="toggle-menu" class="button-menu"></label>
     <ul class="menu">
       {#each data.pages as page}
         <li><a href={page.url}>{page.title}</a></li>
       {/each}
     </ul>
+    <div class="info hidden">
+      <p>Drag the canvas and explore my resume</p>
+    </div>
+    <div class="button-container">
+      <button class="show-info hidden">?</button>
+      <button class="show-links hidden">menu</button>
+    </div>
   </nav>
 </section>
 
@@ -22,68 +77,54 @@
     bottom: 0;
     right: 0;
     margin: 2rem;
-    z-index: 999;
+    z-index: 1000;
   }
 
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-bottom: 1rem;
     text-align: right;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, visibility 0.3s ease;
-    visibility: hidden; 
   }
 
-  .toggle-menu:checked ~ .menu {
-    max-height: 100vh; 
-    visibility: visible;
+  .button-container {
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    gap: 0.5rem;
   }
 
-  .toggle-menu:checked + .button-menu::after {
-    content: "✖";
-  }
-
-  .button-menu {
+  button {
+    justify-content: right;
+    align-items: center;
     font-family: 'Righteous', sans-serif;
     color: var(--white);
     text-transform: uppercase;
     text-align: center;
     font-size: 1.2rem;
-    border-radius: 0.8rem;
-    cursor: pointer;
-    border: none;
-    z-index: 1; 
-    position: relative; 
-    padding: 0.5rem 1rem; 
-    display: inline-block; 
-    background-color: var(--darkpurple);
-  }
-
-  .button-menu::after {
-    content: "menu"; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .menu {
     padding: 0.5rem 1rem;
     border-radius: 0.8rem;
     background-color: var(--darkpurple);
     text-decoration: none;
-    transition: max-height 0.3s ease, visibility 0.3s ease; 
-    position: absolute;
-    bottom: 2rem; 
-    right: 0;
-    z-index: 0; 
+    cursor: pointer;
+    border: none;
   }
 
-  /* Hide checkbox */
-  .toggle-menu {
+  .menu,
+  .info {
+    padding: 0.5rem 1rem;
+    border-radius: 0.8rem;
+    background-color: var(--darkpurple);
+    text-decoration: none;
+    margin-bottom: 1rem;
+  }
+
+  p{
+    max-width: 10rem;
+    color: white;
+  }
+
+  .hidden {
     display: none;
   }
 </style>
