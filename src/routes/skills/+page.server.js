@@ -6,6 +6,7 @@ export async function load() {
     query Skills {
       skills {
         title
+        subtitle
         name
         value
       }

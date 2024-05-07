@@ -4,9 +4,12 @@
 
 <section>
     <div class="skills-container">
-    <h2>{data.skills[0].title}</h2>
-    <p>{data.skills[0].name}</p>
-    <p>{data.skills[0].value}</p>
+    <h1>{data.skills[0].title}</h1>
+    <h2>{data.skills[0].subtitle}</h2>
+    {#each data.skills as skill}
+    <p>{skill.name}</p>
+    <p>{skill.value}%</p>
+  {/each}
 </div>
 </section>
 
@@ -16,8 +19,19 @@
         width: 100vw;
         height: 100vh;
     }
-    h2 {
+    h1 {
         color: var(--lightorange);
+        font-size: 5rem;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        color: var(--yellow);
+        font-size: 1.5rem;
+    }
+
+    p{
+        color: white;
     }
 
 

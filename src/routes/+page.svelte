@@ -1,11 +1,11 @@
 <script>
-import Button from "../lib/components/Button.svelte";
-import Homepage2 from "../lib/components/Homepage2.svelte"
+import Nav from "../lib/components/Nav.svelte";
+import Homepage from "../lib/components/Homepage.svelte"
+
 
 export let data;
 
 </script>
 
-<Button {data}/>
-<Homepage2 {data}/>
-<!-- <Homepage {data}/> -->
+<Nav {data}/>
+<Homepage {data}/>
