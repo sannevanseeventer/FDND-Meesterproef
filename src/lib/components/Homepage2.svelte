@@ -1,26 +1,9 @@
-<!-- <script>
-    export let data
-    import { onMount } from "svelte";
-    import { gsap } from "gsap/dist/gsap";
-    import { Draggable } from "gsap/dist/Draggable";
-  
-    gsap.registerPlugin(Draggable);
-  
-    onMount(() => {
-      const mapContainer = document.querySelector('.map-container');
-      const map = document.querySelector('.map');
-  
-      Draggable.create(map, {
-        type: "x,y",
-        edgeResistance: 1,
-        allowContextMenu: true,
-        bounds: mapContainer,
-      });
-    });
-  </script>
+<script>
+export let data
+</script>
 
   
-  <main class="map-container">
+<main class="map-container">
     <div class="map">
       {#each data.pages as page}
         <a class="link" style="top: {page.top}rem; left: {page.left}rem;" href={page.url}>{page.title}</a>
@@ -57,4 +40,3 @@
       cursor: pointer;
     }
   </style>
-   -->

@@ -7,8 +7,15 @@ export async function load() {
       skills {
         title
         subtitle
-        name
-        value
+        bar {
+          ... on Bar {
+            name
+            value
+            color {
+              hex
+            }
+          }
+        }
       }
     }
   `;
