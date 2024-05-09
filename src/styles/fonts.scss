@@ -3,14 +3,25 @@
   src: url("/font/Righteous-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Outfit";
+  src: url("/font/Outfit-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alata";
+  src: url("/font/Alata-Regular.ttf") format("truetype");
+}
+
 body {
-  font-family: "Righteous", Arial, sans-serif;
+  font-family: "Righteous", "Roboto", sans-serif;
   font-weight: 400;
 }
 
 p {
   font-size: 1rem;
-  font-family: "Righteous", sans-serif;
+  font-family: "Alata", "Roboto", sans-serif;
+  color: var(--white);
 }
 
 li,
@@ -22,7 +33,7 @@ ul {
 
 a {
   font-size: 1.2rem;
-  font-family: "Righteous", sans-serif;
+  font-family: "Righteous", "Roboto", sans-serif;
   text-decoration: none;
   text-align: left;
   // text-transform: uppercase;
@@ -30,12 +41,15 @@ a {
 }
 
 h2 {
-  padding-top: 1rem;
-  margin: 0;
-  font-size: 5rem;
+  text-transform: uppercase;
+  color: var(--yellow);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 h1 {
-  padding-top: 1rem;
   margin: 0;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
 }

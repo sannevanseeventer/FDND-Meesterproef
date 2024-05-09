@@ -6,6 +6,9 @@ export async function load() {
     query Skills {
       skills {
         title
+        largetext {
+          text
+        }
         subtitle
         bar {
           ... on Bar {

@@ -5,8 +5,19 @@ export async function load() {
   let query = gql`
     query Portfolios {
       portfolios {
-        slug
         title
+        slug
+        subtitle
+        description
+        image {
+          url
+        }
+        label {
+          label
+          labelcolor {
+            hex
+          }
+        }
       }
     }
   `;
