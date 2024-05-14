@@ -9,4 +9,4 @@ export let data;
 </script>
 
 <Nav {data}/>
-<Homepage2 {data}/>
+<Homepage {data}/>

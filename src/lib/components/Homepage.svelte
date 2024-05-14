@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
     export let data
     import { onMount } from "svelte";
     import { gsap } from "gsap/dist/gsap";
@@ -57,4 +57,4 @@
       cursor: pointer;
     }
   </style>
-   -->
+  

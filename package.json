@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write src/**/*.svelte"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^2.0.0",
@@ -17,6 +18,7 @@
   },
   "type": "module",
   "dependencies": {
-    "graphql-request": "^6.1.0"
+    "graphql-request": "^6.1.0",
+    "gsap": "^3.12.5"
   }
 }

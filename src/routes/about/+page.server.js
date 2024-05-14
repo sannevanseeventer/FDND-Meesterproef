@@ -5,9 +5,18 @@ export async function load() {
   let query = gql`
     query Abouts {
       abouts {
-        slug
         title
-        content
+        slug
+        image {
+          url
+        }
+        quality {
+          quality
+          value
+          color {
+            hex
+          }
+        }
       }
     }
   `;
