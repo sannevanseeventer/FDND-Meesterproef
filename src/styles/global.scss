@@ -11,3 +11,21 @@ html {
 ::-webkit-scrollbar {
   display: none;
 }
+
+li,
+ul {
+  text-decoration: none;
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  font-size: 1.2rem;
+  font-family: "Righteous", "Roboto", sans-serif;
+  text-decoration: none;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: 300;
+}
