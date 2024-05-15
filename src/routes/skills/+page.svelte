@@ -1,10 +1,8 @@
 <script>
   import BackButton from "../../lib/components/partials/BackButton.svelte";
-  import SkillBars from "../../lib/components/SkillBars.svelte";
+  import SkillBars from "../../lib/components/flexibles/SkillBars.svelte";
   export let data;
 </script>
-
-<BackButton />
 
 <section>
   <h1>Skills</h1>
@@ -13,6 +11,7 @@
       <SkillBars {skill} />
     {/each}
   </div>
+  <BackButton />
 </section>
 
 <style>
@@ -32,15 +31,12 @@
       height: 100vh;
     }
     .skills-container {
-      overflow-x: auto; /* Enable horizontal scrolling */
       display: flex;
-      justify-content: flex-start; /* Adjust alignment */
-      margin-bottom: 0rem;
+      overflow-x: auto;
+      justify-content: flex-start;
       gap: 8rem;
-      margin-left: -2rem; /* Add negative margin to counteract left padding */
-      margin-right: -2rem; /* Add negative margin to counteract right padding */
-      padding-right: 2rem; /* Remove right padding */
-      padding-left: 2rem;
+      margin: 0 -2rem 0 -2rem;
+      padding: 0 2rem 0 2rem;
     }
   }
 </style>
