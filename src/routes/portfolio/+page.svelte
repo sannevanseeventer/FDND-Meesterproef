@@ -9,7 +9,7 @@
 
 <section>
   {#each data.portfolios as portfolio}
-    <div class="portfolio">
+    <div class="portfolio-container">
       {#if portfolio.title}
         <h1>{portfolio.title}</h1>
       {/if}

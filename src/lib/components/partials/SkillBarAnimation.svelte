@@ -41,6 +41,10 @@
     transition: width 0.5s ease-in-out;
   }
 
+  p {
+    font-size: 1.2rem;
+  }
+
   /* Animation */
   .skill-bar__inner-animation {
     animation: fillAnimation 1s ease-in-out;
