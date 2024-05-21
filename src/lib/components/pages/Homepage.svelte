@@ -1,22 +1,5 @@
 <script>
   export let data;
-  import { onMount } from "svelte";
-  import { gsap } from "gsap/dist/gsap";
-  import { Draggable } from "gsap/dist/Draggable";
-
-  gsap.registerPlugin(Draggable);
-
-  onMount(() => {
-    const mapContainer = document.querySelector(".map-container");
-    const map = document.querySelector(".map");
-
-    Draggable.create(map, {
-      type: "x,y",
-      edgeResistance: 1,
-      allowContextMenu: true,
-      bounds: mapContainer,
-    });
-  });
 </script>
 
 <main class="map-container">
@@ -45,7 +28,7 @@
     width: 2500px;
     height: 2500px;
     position: relative;
-    background-image: url("jscheck.svg");
+    background-image: url("background2.svg");
     background-size: cover;
     background-repeat: no-repeat;
   }

@@ -13,7 +13,7 @@
     <li class="feature7 grid-item">Perfectionism</li>
     <li class="feature8 grid-item">Eager to learn</li>
     <li class="feature9 grid-item"></li>
-    <li class="feature10 grid-item">independent</li>
+    <li class="feature10 grid-item">Zelfstandig</li>
     <li class="feature11 grid-item"></li>
     <li class="feature12 grid-item"></li>
   </ul>
@@ -79,7 +79,7 @@
 
   .feature1 {
     grid-area: feature1;
-    background-color: var(--midpurple);
+    background-color: var(--berry);
   }
 
   .feature2 {
@@ -89,7 +89,7 @@
 
   .feature3 {
     grid-area: feature3;
-    background-color: var(--berry);
+    background-color: var(--midpurple);
   }
 
   .feature4 {
@@ -130,5 +130,16 @@
   .feature12 {
     grid-area: feature12;
     background-color: var(--lightpink);
+  }
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 100%;
+      column-gap: 4rem;
+    }
+
+    li {
+      padding: 1.5rem 1rem;
+      font-size: 2rem;
+    }
   }
 </style>

@@ -7,4 +7,4 @@
 </script>
 
 <NavBar {data} />
-<Homepage {data} />
+<Homepage2 {data} />

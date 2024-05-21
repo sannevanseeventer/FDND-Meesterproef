@@ -25,6 +25,6 @@
   h3 {
     color: var(--orange);
     font-size: 1.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 </style>

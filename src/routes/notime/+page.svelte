@@ -5,7 +5,7 @@
 
 <BackButton />
 <section>
-  <h1>{data.experiences[0].title}</h1>
+  <h1>{data.notimes[0].title}</h1>
 </section>
 
 <style>
