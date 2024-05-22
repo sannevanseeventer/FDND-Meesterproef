@@ -66,6 +66,7 @@
       vertical-align: top;
       margin-right: 20px;
       width: 400px;
+      height: auto;
     }
 
     span {

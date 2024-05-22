@@ -114,7 +114,7 @@
 
   .menu,
   .info {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 0.8rem;
     background-color: var(--darkpurple);
     text-decoration: none;
