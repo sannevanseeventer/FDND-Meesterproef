@@ -27,7 +27,7 @@
     width: 2500px;
     height: 2500px;
     position: relative;
-    background-image: url("static/backgroundalmost.svg");
+    background-image: url("/static/backgroundalmost.svg");
     /* background-image: url("nocolor.svg"); */
     background-size: cover;
     background-repeat: no-repeat;
