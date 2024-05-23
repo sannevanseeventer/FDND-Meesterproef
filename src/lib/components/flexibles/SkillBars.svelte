@@ -56,7 +56,7 @@
 
   p {
     font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     margin-top: 0.5rem;
   }
 
@@ -76,6 +76,10 @@
     .large-text {
       width: 20rem;
       margin: 50% auto;
+    }
+
+    p {
+      font-size: 1.3rem;
     }
   }
 </style>

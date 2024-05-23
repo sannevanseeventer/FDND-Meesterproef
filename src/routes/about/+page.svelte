@@ -8,7 +8,7 @@
 
 <section>
   <h1>{data.abouts[0].title}</h1>
-  <h3>Scroll down to reveal more information about me</h3>
+  <h2>Scroll down to reveal more information about me</h2>
   <FeatureGrid />
 </section>
 
@@ -22,7 +22,7 @@
     color: var(--midpurple);
   }
 
-  h3 {
+  h2 {
     color: var(--orange);
     font-size: 1.5rem;
     margin-bottom: 2rem;

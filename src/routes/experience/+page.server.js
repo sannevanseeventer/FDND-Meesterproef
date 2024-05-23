@@ -6,6 +6,13 @@ export async function load() {
     query Experiences {
       experiences {
         title
+        slug
+        work {
+          year
+          function
+          subtitle
+          description
+        }
       }
     }
   `;
