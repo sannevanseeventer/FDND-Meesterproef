@@ -34,7 +34,7 @@
       display: flex;
       overflow-x: auto;
       justify-content: flex-start;
-      gap: 8rem;
+      gap: 7rem;
       margin: 0 -2rem 0 -2rem;
       padding: 0 2rem 0 2rem;
     }

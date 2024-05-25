@@ -62,10 +62,13 @@
       justify-content: space-between;
       align-items: center;
       width: 350px;
+      height: 45px;
     }
-
+    .skill-bar__inner {
+      height: 35px;
+    }
     .skill-value__container {
-      gap: 2rem;
+      gap: 1rem;
     }
   }
 </style>
