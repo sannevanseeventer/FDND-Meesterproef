@@ -1,6 +1,7 @@
 <script>
   import BackButton from "../../lib/components/partials/BackButton.svelte";
   import SkillBars from "../../lib/components/flexibles/SkillBars.svelte";
+  import ArrowAnimation from "../../lib/components/partials/ArrowAnimation.svelte";
   export let data;
 </script>
 
@@ -12,6 +13,7 @@
     {/each}
   </div>
   <BackButton />
+  <ArrowAnimation />
 </section>
 
 <style>
