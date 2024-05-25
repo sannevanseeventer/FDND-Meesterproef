@@ -37,7 +37,7 @@
       ". . picture"
       "feature1 feature1 feature1"
       "feature2 feature3 feature3"
-      ". feature4 feature4"
+      "feature4 feature4 ."
       "feature5 feature5 feature6"
       ". feature7 feature7"
       "feature8 feature8 feature8"
