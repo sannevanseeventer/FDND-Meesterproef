@@ -12,6 +12,10 @@ export async function load() {
           function
           subtitle
           description
+          period
+          color {
+            hex
+          }
         }
       }
     }

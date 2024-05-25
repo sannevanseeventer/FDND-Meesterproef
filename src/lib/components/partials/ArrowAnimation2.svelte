@@ -2,17 +2,17 @@
   import { onMount } from "svelte";
   onMount(() => {
     const arrow = document.querySelector(".arrow");
-    const skillsContainer = document.querySelector(".skills-container");
+    const experienceContainer = document.querySelector(".experience-container");
 
     const handleScroll = () => {
-      const scrollLeft = skillsContainer.scrollLeft;
+      const scrollLeft = experienceContainer.scrollLeft;
       arrow.style.opacity = Math.max(1 - scrollLeft / 250, 0);
     };
 
-    skillsContainer.addEventListener("scroll", handleScroll);
+    experienceContainer.addEventListener("scroll", handleScroll);
 
     return () => {
-      skillsContainer.removeEventListener("scroll", handleScroll);
+      experienceContainer.removeEventListener("scroll", handleScroll);
     };
   });
 </script>
