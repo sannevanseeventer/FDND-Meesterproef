@@ -6,7 +6,6 @@ export async function load() {
     query Portfolios {
       portfolios {
         title
-        slug
         subtitle
         description
         image {

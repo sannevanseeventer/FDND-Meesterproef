@@ -14,16 +14,15 @@
 
 <style>
   section {
-    background-color: var(--yellow);
+    background-color: var(--berry);
     padding: 2rem;
     height: auto;
   }
   h1 {
-    color: var(--midpurple);
+    color: var(--lightpink);
   }
 
   h2 {
-    color: var(--orange);
     font-size: 1.5rem;
     margin-bottom: 2rem;
   }

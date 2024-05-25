@@ -1,6 +1,7 @@
 <script>
   import { enhance } from "$app/forms";
   import BackButton from "../../lib/components/partials/BackButton.svelte";
+  // import FormLoader from "../../lib/components/partials/FormLoader.svelte";
 
   export let form;
   export let data;
@@ -22,10 +23,6 @@
   <h1>{data.contacts[0].title}</h1>
   <form action="/contact" method="POST" use:enhance={handleForm}>
     <h2>Let’s create together and hit me up!</h2>
-
-    {#if form?.error}
-      <p class="message fail">{form.message}</p>
-    {/if}
 
     <fieldset>
       <label>
@@ -65,6 +62,7 @@
     <button>Send</button>
 
     {#if loading}
+      <!-- <FormLoader /> -->
       <svg
         class="loader"
         width="24"
@@ -72,33 +70,6 @@
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <style>
-          .spinner_rect {
-            animation: bounce 0.5s infinite;
-            fill: var(--lightpink);
-            border-radius: 1.5px;
-          }
-          .rect2 {
-            animation-delay: 0.1s;
-          }
-          .rect3 {
-            animation-delay: 0.2s;
-          }
-          @keyframes bounce {
-            0%,
-            57.14% {
-              animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
-              transform: translate(0);
-            }
-            28.57% {
-              animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
-              transform: translateY(-6px);
-            }
-            100% {
-              transform: translate(0);
-            }
-          }
-        </style>
         <rect
           class="spinner_rect"
           x="4.5"
@@ -127,10 +98,46 @@
           ry="1.5"
         />
       </svg>
+
+      <style>
+        .spinner_rect {
+          animation: bounce 0.5s infinite;
+          fill: var(--lightpink);
+          border-radius: 1.5px;
+        }
+        .loader {
+          display: block;
+          margin: 1rem auto;
+        }
+        .rect2 {
+          animation-delay: 0.1s;
+        }
+        .rect3 {
+          animation-delay: 0.2s;
+        }
+        @keyframes bounce {
+          0%,
+          57.14% {
+            animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+            transform: translate(0);
+          }
+          28.57% {
+            animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+            transform: translateY(-6px);
+          }
+          100% {
+            transform: translate(0);
+          }
+        }
+      </style>
     {/if}
 
     {#if form?.success}
       <p class:active={form?.success}>Thank you for your message!</p>
+    {/if}
+
+    {#if form?.error}
+      <p class="message fail">{form.message}</p>
     {/if}
   </form>
   <BackButton />
@@ -172,7 +179,7 @@
 
   textarea {
     resize: none;
-    height: 100px;
+    height: 6rem;
   }
 
   ::placeholder {
@@ -196,11 +203,6 @@
     text-transform: uppercase;
     cursor: pointer;
     padding: 0;
-  }
-
-  .loader {
-    display: block;
-    margin: 1rem auto;
   }
 
   .fail {

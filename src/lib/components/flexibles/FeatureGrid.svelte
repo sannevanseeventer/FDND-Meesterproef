@@ -7,13 +7,13 @@
     <li class="feature1 grid-item">Sanne van Seeventer</li>
     <li class="feature2 grid-item">27</li>
     <li class="feature3 grid-item">Amsterdam</li>
-    <li class="feature4 grid-item">Leergierig</li>
+    <li class="feature4 grid-item"></li>
     <li class="feature5 grid-item">Creative</li>
     <li class="feature6 grid-item"></li>
-    <li class="feature7 grid-item">Perfectionism</li>
+    <li class="feature7 grid-item">Perfectionist</li>
     <li class="feature8 grid-item">Eager to learn</li>
     <li class="feature9 grid-item"></li>
-    <li class="feature10 grid-item">Zelfstandig</li>
+    <li class="feature10 grid-item">Flexible</li>
     <li class="feature11 grid-item"></li>
     <li class="feature12 grid-item"></li>
   </ul>
@@ -79,32 +79,32 @@
 
   .feature1 {
     grid-area: feature1;
-    background-color: var(--berry);
+    background-color: var(--orange);
   }
 
   .feature2 {
     grid-area: feature2;
-    background-color: var(--orange);
+    background-color: var(--midpurple);
   }
 
   .feature3 {
     grid-area: feature3;
-    background-color: var(--midpurple);
+    background-color: var(--pink);
   }
 
   .feature4 {
     grid-area: feature4;
-    background-color: var(--darkpurple);
+    background-color: var(--featureyellow);
   }
 
   .feature5 {
     grid-area: feature5;
-    background-color: var(--midpurple);
+    background-color: var(--darkpurple);
   }
 
   .feature6 {
     grid-area: feature6;
-    background-color: var(--lightpink);
+    background-color: var(--lightorange);
   }
 
   .feature7 {
@@ -113,24 +113,25 @@
   }
   .feature8 {
     grid-area: feature8;
-    background-color: var(--berry);
+    background-color: var(--midpurple);
   }
   .feature9 {
     grid-area: feature9;
-    background-color: var(--darkpurple);
+    background-color: var(--featureyellow);
   }
   .feature10 {
     grid-area: feature10;
-    background-color: var(--orange);
+    background-color: var(--pink);
   }
   .feature11 {
     grid-area: feature11;
-    background-color: var(--lightpink);
+    background-color: var(--lightorange);
   }
   .feature12 {
     grid-area: feature12;
     background-color: var(--lightpink);
   }
+
   @media screen and (min-width: 768px) {
     .container {
       width: 100%;
