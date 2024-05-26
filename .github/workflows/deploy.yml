@@ -1,0 +1,31 @@
+name: Deploy SSG Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'  # Adjust this to the version of Node.js your SSG requires
+
+    - name: Install dependencies
+      run: npm install  # Change this if your project uses yarn or another package manager
+
+    - name: Build the site
+      run: npm run build  # Adjust this command according to your SSG build script
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build  # Adjust this to the directory where your SSG outputs the site
