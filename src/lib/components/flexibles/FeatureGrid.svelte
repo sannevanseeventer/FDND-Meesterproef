@@ -3,7 +3,7 @@
 
 <section>
   <ul class="container">
-    <li class="picture grid-item"><img src="Sanne.JPEG" alt="Sanne" /></li>
+    <li class="picture grid-item"><!-- <img src="Sanne.JPEG" alt="Sanne" /> --></li>
     <li class="feature1 grid-item">Sanne van Seeventer</li>
     <li class="feature2 grid-item">27</li>
     <li class="feature3 grid-item">Amsterdam</li>
@@ -33,24 +33,24 @@
     margin-bottom: 4rem;
     grid-auto-flow: dense;
     grid-template-areas:
-      ". . picture"
-      ". . picture"
-      "feature1 feature1 feature1"
-      "feature2 feature3 feature3"
-      "feature4 feature4 ."
-      "feature5 feature5 feature6"
-      ". feature7 feature7"
-      "feature8 feature8 feature8"
-      "feature9 feature10 feature10"
-      ". . feature11"
-      ". feature12 feature12";
+      '. . picture'
+      '. . picture'
+      'feature1 feature1 feature1'
+      'feature2 feature3 feature3'
+      'feature4 feature4 .'
+      'feature5 feature5 feature6'
+      '. feature7 feature7'
+      'feature8 feature8 feature8'
+      'feature9 feature10 feature10'
+      '. . feature11'
+      '. feature12 feature12';
   }
 
-  img {
+  /* img {
     width: 100px;
     height: auto;
     border-radius: 5px;
-  }
+  } */
 
   @supports (animation-timeline: scroll()) {
     @keyframes slide-fade-in {
