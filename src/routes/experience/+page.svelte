@@ -1,7 +1,7 @@
 <script>
   export let data
-  import ArrowAnimationRight from '../../lib/components/partials/ArrowAnimationRight.svelte'
-  import BackButton from '../../lib/components/partials/BackButton.svelte'
+  import ArrowAnimationRight from '../../lib/components/atoms/ArrowAnimationRight.svelte'
+  import BackButton from '../../lib/components/atoms/BackButton.svelte'
   console.log(data)
 </script>
 

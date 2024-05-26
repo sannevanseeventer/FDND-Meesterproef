@@ -1,8 +1,8 @@
 <script>
   import { enhance } from '$app/forms'
-  import BackButton from '../../lib/components/partials/BackButton.svelte'
-  import FormLoader from '../../lib/components/partials/FormLoader.svelte'
-  import SendButton from '../../lib/components/partials/SendButton.svelte'
+  import BackButton from '../../lib/components/atoms/BackButton.svelte'
+  import FormLoader from '../../lib/components/atoms/FormLoader.svelte'
+  import SendButton from '../../lib/components/atoms/SendButton.svelte'
 
   export let form
   export let data

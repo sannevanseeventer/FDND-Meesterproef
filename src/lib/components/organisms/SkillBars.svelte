@@ -1,16 +1,13 @@
 <script>
-  import SkillBarAnimation from "../partials/SkillBarAnimation.svelte";
-  export let skill;
+  import SkillBarAnimation from '../atoms/SkillBarAnimation.svelte'
+  export let skill
 </script>
 
 <div class="skills-container">
   <!-- Baking Text -->
   {#if skill.largetext}
     <div class="large-text">
-      <span
-        ><span class="large-text__ampersand">&</span>{skill.largetext
-          .text}</span
-      >
+      <span><span class="large-text__ampersand">&</span>{skill.largetext.text}</span>
     </div>
   {/if}
   {#if skill.subtitle}
@@ -41,7 +38,7 @@
   }
 
   .large-text__ampersand {
-    font-family: "Alata", "Roboto", sans-serif;
+    font-family: 'Alata', 'Roboto', sans-serif;
     margin-right: 0.5rem;
   }
 

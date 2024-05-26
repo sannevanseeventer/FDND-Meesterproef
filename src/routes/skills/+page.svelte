@@ -1,8 +1,8 @@
 <script>
-  import BackButton from "../../lib/components/partials/BackButton.svelte";
-  import SkillBars from "../../lib/components/flexibles/SkillBars.svelte";
-  import ArrowAnimation from "../../lib/components/partials/ArrowAnimation.svelte";
-  export let data;
+  import BackButton from '../../lib/components/atoms/BackButton.svelte'
+  import SkillBars from '../../lib/components/organisms/SkillBars.svelte'
+  import ArrowAnimation from '../../lib/components/atoms/ArrowAnimation.svelte'
+  export let data
 </script>
 
 <section>

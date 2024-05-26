@@ -1,9 +1,9 @@
-import { gql } from "graphql-request";
-import { hygraph } from "$lib/utils/hygraph.js";
+import { gql } from 'graphql-request'
+import { hygraph } from '$lib/utils/hygraph.js'
 
 export async function load() {
   let query = gql`
-    query Page {
+    query Homepage {
       pages {
         title
         left
@@ -11,7 +11,7 @@ export async function load() {
         url
       }
     }
-  `;
+  `
 
-  return await hygraph.request(query);
+  return await hygraph.request(query)
 }

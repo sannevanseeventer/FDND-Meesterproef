@@ -26,7 +26,8 @@
  * ```
  */
 declare module '$env/static/private' {
-	export const HYGRAPH_TOKEN: string;
+	export const HYGRAPH_URL: string;
+	export const HYGRAPH_KEY: string;
 	export const NVM_INC: string;
 	export const MANPATH: string;
 	export const TERM_PROGRAM: string;
@@ -123,7 +124,8 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
-		HYGRAPH_TOKEN: string;
+		HYGRAPH_URL: string;
+		HYGRAPH_KEY: string;
 		NVM_INC: string;
 		MANPATH: string;
 		TERM_PROGRAM: string;

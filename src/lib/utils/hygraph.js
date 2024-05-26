@@ -1,12 +1,9 @@
-import { HYGRAPH_KEY, HYGRAPH_URL } from "$env/static/private";
+import { HYGRAPH_KEY, HYGRAPH_URL } from '$env/static/private'
 
-import { GraphQLClient } from "graphql-request";
+import { GraphQLClient } from 'graphql-request'
 
-export const hygraph = new GraphQLClient(
-  "https://eu-central-1-shared-euc1-02.cdn.hygraph.com/content/clr4toeau8nch01uq8b13r4o1/master",
-  {
-    headers: {
-      Authorization: `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdjbXMtbWFpbi1wcm9kdWN0aW9uIn0.eyJ2ZXJzaW9uIjozLCJpYXQiOjE3MDQ3MTIzNTIsImF1ZCI6WyJodHRwczovL2FwaS1ldS1jZW50cmFsLTEtc2hhcmVkLWV1YzEtMDIuaHlncmFwaC5jb20vdjIvY2xyNHRvZWF1OG5jaDAxdXE4YjEzcjRvMS9tYXN0ZXIiLCJtYW5hZ2VtZW50LW5leHQuZ3JhcGhjbXMuY29tIl0sImlzcyI6Imh0dHBzOi8vbWFuYWdlbWVudC1ldS1jZW50cmFsLTEtc2hhcmVkLWV1YzEtMDIuaHlncmFwaC5jb20vIiwic3ViIjoiNTc3MDZlNDAtMmEzMC00ZmQxLWFlYTAtYWUxZGQyMzI2MjZlIiwianRpIjoiY2xyNHRweHZuMDNxbDAxdXYweTZqNTZ1OCJ9.vq6hGj9CjKx_S3z1H1WxywH-Z8HjuJgLVoOannfCdy0ZTxdcaX3R2-xVtlrVD1eQL9gVKMQ_hCNBQKPXpFrzAenbZtOJzmufpFrKpljysaAkGDwHn2iXpGExMH24uT9hymxoPq_j9kbm3_VbknY1aPfyC7tzkfdRSNquFXgXR9pSwkkH5O0z5tuTMCxupd4zdqwTCcYfR6JVh-3jD_lGhdeuwHnYNf46ZLaXaC7XMla8FWVUapdKF6QQlKMxy3ZtbzgW_Cnng_7dUSAiJPHl-g5FAiojdP7nkGIq7oaieNP-EvewCNRaBKLgChhCzz2bfE8rfI9hqrsrvhxU3VbH9B85QUl-O2YJZeExlhKfdVqVo7dSMZ30YtJPiShJFQ5IPoGhEt0zejqUtI1Ny4Lf_BIYSDHERxx2tGvgOcs09BQLl2LQ6iC5PA0nbR2Rya-YiYOYvzQfNejvJ2_lHaLEy2jtFAHJQf6ddXbqK1ZZsFabqKlipedt69bIQOzCFmDs64tZBc_hQtlKFeyluyWF-Yk7Poy1adGdvKJ1EuYcic71V9cNcTlJ9qYau1YtAOZP9x8j07SWpqhRh_bN3gglQsqyscSMB2P3SSgw4TPTqUaE46tw_WcCaGz2mkvWglQBuIMg1SvbeqJf0p5xZbvyKLEs75rzY8-D4EMJWOlkGAk`,
-    },
+export const hygraph = new GraphQLClient(HYGRAPH_URL, {
+  headers: {
+    Authorization: `Bearer ${HYGRAPH_KEY}`,
   },
-);
+})

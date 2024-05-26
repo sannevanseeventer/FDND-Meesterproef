@@ -1,8 +1,8 @@
 <script>
-  import BackButton from "../../lib/components/partials/BackButton.svelte";
-  import ImageSlider from "../../lib/components/flexibles/ImageSlider.svelte";
+  import BackButton from '../../lib/components/atoms/BackButton.svelte'
+  import ImageSlider from '../../lib/components/organisms/ImageSlider.svelte'
 
-  export let data;
+  export let data
 </script>
 
 <BackButton />
@@ -53,7 +53,7 @@
   }
 
   p {
-    font-family: "Outfit", sans-serif;
+    font-family: 'Outfit', sans-serif;
     margin-bottom: 4rem;
   }
 </style>
