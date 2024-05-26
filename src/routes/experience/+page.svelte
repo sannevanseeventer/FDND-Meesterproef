@@ -1,12 +1,12 @@
 <script>
   export let data;
-  import ArrowAnimation2 from "../../lib/components/partials/ArrowAnimation2.svelte";
+  import ArrowAnimationRight from "../../lib/components/partials/ArrowAnimationRight.svelte";
   import BackButton from "../../lib/components/partials/BackButton.svelte";
   console.log(data);
 </script>
 
 <BackButton />
-<ArrowAnimation2 />
+<ArrowAnimationRight />
 
 <section>
   <h1>{data.experiences[0].title}</h1>
@@ -38,12 +38,6 @@
     {/each}
   </div>
 </section>
-
-<!-- <script>
-  import Test from "../../lib/components/flexibles/test.svelte";
-</script>
-
-<Test /> -->
 
 <style>
   section {
@@ -110,7 +104,7 @@
     margin-bottom: 3rem;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 462px) {
     section {
       height: 100vh;
     }
@@ -125,7 +119,7 @@
       width: 200vw;
       display: flex;
       margin-top: 4rem;
-      align-items: center;
+      /* align-items: center; */
     }
     .rectangle {
       display: none;

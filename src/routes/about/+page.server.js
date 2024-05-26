@@ -6,6 +6,7 @@ export async function load() {
     query Abouts {
       abouts {
         title
+        subtitle
         slug
         image {
           url

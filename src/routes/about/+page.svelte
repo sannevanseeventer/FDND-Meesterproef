@@ -4,12 +4,11 @@
   import BackButton from "../../lib/components/partials/BackButton.svelte";
 </script>
 
-<BackButton />
-
 <section>
   <h1>{data.abouts[0].title}</h1>
-  <h2>Scroll down to reveal more information about me</h2>
+  <h2>{data.abouts[0].subtitle}</h2>
   <FeatureGrid />
+  <BackButton />
 </section>
 
 <style>
