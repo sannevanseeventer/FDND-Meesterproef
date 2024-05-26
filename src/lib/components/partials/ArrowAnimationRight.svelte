@@ -1,20 +1,20 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount } from 'svelte'
   onMount(() => {
-    const arrow = document.querySelector(".arrow");
-    const experienceContainer = document.querySelector(".experience-container");
+    const arrow = document.querySelector('.arrow')
+    const experienceContainer = document.querySelector('.experience-container')
 
     const handleScroll = () => {
-      const scrollLeft = experienceContainer.scrollLeft;
-      arrow.style.opacity = Math.max(1 - scrollLeft / 250, 0);
-    };
+      const scrollLeft = experienceContainer.scrollLeft
+      arrow.style.opacity = Math.max(1 - scrollLeft / 250, 0)
+    }
 
-    experienceContainer.addEventListener("scroll", handleScroll);
+    experienceContainer.addEventListener('scroll', handleScroll)
 
     return () => {
-      experienceContainer.removeEventListener("scroll", handleScroll);
-    };
-  });
+      experienceContainer.removeEventListener('scroll', handleScroll)
+    }
+  })
 </script>
 
 <div class="wrap">
