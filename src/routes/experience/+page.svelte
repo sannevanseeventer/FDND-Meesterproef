@@ -1,8 +1,8 @@
 <script>
-  export let data;
-  import ArrowAnimationRight from "../../lib/components/partials/ArrowAnimationRight.svelte";
-  import BackButton from "../../lib/components/partials/BackButton.svelte";
-  console.log(data);
+  export let data
+  import ArrowAnimationRight from '../../lib/components/partials/ArrowAnimationRight.svelte'
+  import BackButton from '../../lib/components/partials/BackButton.svelte'
+  console.log(data)
 </script>
 
 <BackButton />
@@ -14,16 +14,10 @@
     {#each data.experiences as experience}
       {#each experience.work as item}
         <ul class="work-items-container">
-          <li
-            style="background-color: {item.color.hex};"
-            class="rectangle-fullscreen"
-          ></li>
+          <li style="background-color: {item.color.hex};" class="rectangle-fullscreen"></li>
           <li class="work-item">
             <div class="line-year">
-              <div
-                style="background-color: {item.color.hex};"
-                class="rectangle"
-              ></div>
+              <div style="background-color: {item.color.hex};" class="rectangle"></div>
               <span style="color: {item.color.hex};">{item.year}</span>
             </div>
             <h2>{item.function}</h2>
@@ -69,7 +63,7 @@
 
   .period {
     font-size: 1rem;
-    font-family: "Outfit", sans-serif;
+    font-family: 'Outfit', sans-serif;
     margin-bottom: 0.5rem;
     color: var(--lightpink);
   }
@@ -111,7 +105,7 @@
     .experience-container {
       overflow-x: auto;
       display: flex;
-      gap: 8rem;
+      gap: 6rem;
       margin: 0 -2rem 0 -2rem;
       padding: 0 2rem 0 2rem;
     }
@@ -127,14 +121,14 @@
 
     .rectangle-fullscreen {
       display: block;
-      width: 150px;
+      width: 40px;
       height: 400px;
       border-radius: 5px;
       margin-right: 2rem;
     }
 
     .work-item {
-      max-width: 30rem;
+      width: 22rem;
       margin-bottom: 0;
     }
   }

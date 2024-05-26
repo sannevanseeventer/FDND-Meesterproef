@@ -3,7 +3,7 @@
 
 <section>
   <ul class="container">
-    <li class="picture grid-item">Picture</li>
+    <li class="picture grid-item"><img src="Sanne.JPEG" alt="Sanne" /></li>
     <li class="feature1 grid-item">Sanne van Seeventer</li>
     <li class="feature2 grid-item">27</li>
     <li class="feature3 grid-item">Amsterdam</li>
@@ -46,6 +46,12 @@
       ". feature12 feature12";
   }
 
+  img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+  }
+
   @supports (animation-timeline: scroll()) {
     @keyframes slide-fade-in {
       from {
@@ -74,7 +80,7 @@
 
   .picture {
     grid-area: picture;
-    background-color: var(--darkpurple);
+    background-color: var(--midpurple);
   }
 
   .feature1 {
