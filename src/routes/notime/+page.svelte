@@ -1,12 +1,18 @@
 <script>
-  export let data;
-  import BackButton from "../../lib/components/partials/BackButton.svelte";
+  export let data
+  import BackButton from '../../lib/components/partials/BackButton.svelte'
 </script>
 
 <BackButton />
 <section>
   <h1>{data.notimes[0].title}</h1>
 </section>
+<!-- 
+<script>
+  import ScrollDrivenEffect from '../../lib/components/flexibles/ScrollDrivenEffect.svelte'
+</script>
+
+<ScrollDrivenEffect /> -->
 
 <style>
   section {
