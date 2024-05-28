@@ -6,28 +6,49 @@ import { hygraph } from '$lib/utils/hygraph.js'
 
 export const prerender = false
 
-// Sending data to Hygraph
+// GLOBALS //
+// Query voor globale contactpagina
+const NEW_QUERY = gql`
+  query Contact {
+    contacts {
+      title
+      slug
+    }
+  }
+`
+
+// Ophalen van contactgegevens
+export async function load() {
+  const newData = await hygraph.request(NEW_QUERY)
+
+  return {
+    contacts: newData.contacts,
+  }
+}
+
+// FORMULIER //
+// Verwerken van formulierdata en versturen naar Hygraph
 export const actions = {
-  default: async ({ request, url }) => {
+  default: async ({ request }) => {
     const formData = await request.formData()
     let name = formData.get('name')
     let email = formData.get('email')
     let comment = formData.get('comment')
 
-    // Check if the name contains at least 2 characters
+    // Controleren of de naam minstens 2 karakters bevat
     if (name.length < 2)
       return fail(400, {
         error: true,
-        message: 'Naam moet minstens 2 karaters bevatten',
+        message: 'Naam moet minstens 2 karakters bevatten',
         name,
         email,
         comment,
       })
 
-    // Mutation
+    // GraphQL Mutatie om comment aan te maken
     const mutation = `
       mutation {
-        createComment(data: { name: "${name}", email: "${email}" comment: "${comment}" }) {
+        createComment(data: { name: "${name}", email: "${email}", comment: "${comment}" }) {
           id
           name
           email
@@ -44,41 +65,8 @@ export const actions = {
       Authorization: `Bearer ${HYGRAPH_KEY}`,
     }
 
-    // Posting the data
+    // Versturen van de data
     const postData = await graphqlRequest(HYGRAPH_URL, mutation, undefined, headers)
     return { success: true, postData }
   },
-}
-
-// Query global contact page
-const NEW_QUERY = gql`
-  query Contact {
-    contacts {
-      title
-      slug
-    }
-  }
-`
-
-// Query comments
-export async function load() {
-  let commentsQuery = gql`
-    query MyQuery {
-      comments {
-        name
-        email
-        comment
-      }
-    }
-  `
-
-  // Fetch comments data
-  const commentsData = await hygraph.request(commentsQuery)
-  const newData = await hygraph.request(NEW_QUERY)
-
-  // Return both data sets
-  return {
-    comments: commentsData.comments,
-    contacts: newData.contacts,
-  }
 }
