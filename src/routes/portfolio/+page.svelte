@@ -7,7 +7,8 @@
 
 <BackButton />
 
-<section>
+<!-- Mobile -->
+<section class="mobile-view">
   {#each data.portfolios as portfolio}
     <div class="portfolio-container">
       {#if portfolio.title}

@@ -1,29 +1,28 @@
-<script>
-  export let data
+<!-- <script>
   import BackButton from '../../lib/components/atoms/BackButton.svelte'
 </script>
 
 <BackButton />
 <section>
   <h1>{data.notimes[0].title}</h1>
-</section>
+</section> -->
 
-<!-- 
 <script>
-  import ScrollDrivenEffect from '../../lib/components/flexibles/ScrollDrivenEffect.svelte'
+  export let data
 </script>
 
-<ScrollDrivenEffect /> -->
+<section>
+  <h1>{data.notimes[0].title}</h1>
+</section>
 
 <style>
   section {
-    background-color: var(--lightpink);
+    background-color: var(--pink);
     padding: 2rem;
-    height: 100vh;
   }
 
   h1 {
-    color: var(--berry);
+    color: var(--lightorange);
     font-size: 3rem;
   }
 </style>

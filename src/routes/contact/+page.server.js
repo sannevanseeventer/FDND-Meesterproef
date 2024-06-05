@@ -17,7 +17,7 @@ const NEW_QUERY = gql`
   }
 `
 
-// Ophalen van contactgegevens
+// Ophalen van contactpagina
 export async function load() {
   const newData = await hygraph.request(NEW_QUERY)
 
@@ -27,7 +27,7 @@ export async function load() {
 }
 
 // FORMULIER //
-// Verwerken van formulierdata en versturen naar Hygraph
+// Verwerken van formulierdata
 export const actions = {
   default: async ({ request }) => {
     const formData = await request.formData()
