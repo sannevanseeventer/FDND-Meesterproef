@@ -1,5 +1,5 @@
-import { gql } from "graphql-request";
-import { hygraph } from "$lib/utils/hygraph.js";
+import { gql } from 'graphql-request'
+import { hygraph } from '$lib/utils/hygraph.js'
 
 export async function load() {
   let query = gql`
@@ -19,7 +19,7 @@ export async function load() {
         }
       }
     }
-  `;
+  `
 
-  return await hygraph.request(query);
+  return await hygraph.request(query)
 }
