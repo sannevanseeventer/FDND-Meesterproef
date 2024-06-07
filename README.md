@@ -1,38 +1,35 @@
-# create-svelte
+# Online cv
+ 
+## Beschrijving 📃
+Interactief CV/portfolio website als afstudeerproject voor FDND
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+![mockup7 (1)](https://github.com/sannevanseeventer/FDND-Meesterproef/assets/112857444/48d8326a-9c9e-4ead-b09b-9ef49609677e)
 
-## Creating a project
+![mockup6](https://github.com/sannevanseeventer/FDND-Meesterproef/assets/112857444/840410b2-96d8-4b87-b707-4bf32ecc9ce8)
 
-If you're seeing this, you've probably already done this step. Congrats!
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
 
-## Developing
+## Kenmerken 🧰
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+**TOOLS:**
+* VSCode
+* Affinity Designer 2
+  
+**GEBRUIKTE TECHNIEKEN 🛠️:**
+* Svelte
+* Sveltekit
+* Hygraph
+* JS
+* CSS
+  
+## Installatie ⚙️
+1. Clone of download deze repository naar de gewenste folder.
+2. Open de root directory van dit project en open het project in een code editor naar keuze.
+3. Gebruik npm install om de benodigde packages te downloaden voor dit project.
+4. Voor het gebruik van Hygraph om data in te laden gebruik dan het commando npm graphql-request om requesten te fetchen.
+5. Start een server met npm run dev.
 
-```bash
-npm run dev
+## Licentie
+This project is licensed under the terms of the MIT license.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
