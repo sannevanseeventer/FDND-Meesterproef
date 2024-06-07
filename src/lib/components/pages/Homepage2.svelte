@@ -1,14 +1,12 @@
 <script>
-  export let data;
+  export let data
 </script>
 
 <main class="map-container">
   <div class="map">
     {#each data.pages as page}
-      <a
-        class="link"
-        style="top: {page.top}rem; left: {page.left}rem;"
-        href={page.url}>{page.title}</a
+      <a class="link" style="top: {page.top}rem; left: {page.left}rem;" href={page.url}
+        >{page.title}</a
       >
     {/each}
   </div>
@@ -27,7 +25,7 @@
     width: 2500px;
     height: 2500px;
     position: relative;
-    background-image: url("backgroundalmost.svg");
+    background-image: url('CV-background.svg');
     /* background-image: url("/static/backgroundalmost.svg"); */
     /* background-image: url("nocolor.svg"); */
     background-size: cover;
@@ -38,7 +36,7 @@
   }
   .link {
     position: absolute;
-    font-family: "Righteous", sans-serif;
+    font-family: 'Righteous', sans-serif;
     font-size: 5rem;
     color: var(--yellow);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);

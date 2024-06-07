@@ -1,5 +1,5 @@
 <script>
-  export let bar;
+  export let bar
 </script>
 
 <div class="skill-value__container">

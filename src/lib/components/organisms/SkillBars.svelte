@@ -1,5 +1,5 @@
 <script>
-  import SkillBarAnimation from '../atoms/SkillBarAnimation.svelte'
+  import { SkillBarAnimation } from '$lib/index'
   export let skill
 </script>
 

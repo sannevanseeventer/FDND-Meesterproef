@@ -19,7 +19,7 @@
     text-align: center;
     font-size: 1.2rem;
     border-radius: 0.8rem;
-    background-color: var(--darkpurple);
+    background-color: var(--darkpurple-bar);
     text-decoration: none;
     cursor: pointer;
   }

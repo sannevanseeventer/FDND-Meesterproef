@@ -1,6 +1,5 @@
 <script>
-  import NavBar from '../lib/components/organisms/NavBar.svelte'
-  import Homepage2 from '../lib/components/pages/Homepage2.svelte'
+  import { NavBar, Homepage2 } from '$lib/index'
 
   export let data
 </script>

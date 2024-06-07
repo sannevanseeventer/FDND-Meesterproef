@@ -1,7 +1,6 @@
 <script>
   export let data
-  import FeatureGrid from '../../lib/components/organisms/FeatureGrid.svelte'
-  import BackButton from '../../lib/components/atoms/BackButton.svelte'
+  import { BackButton, FeatureGrid } from '$lib/index'
 </script>
 
 <section>

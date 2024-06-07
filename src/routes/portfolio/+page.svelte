@@ -1,6 +1,5 @@
 <script>
-  import BackButton from '../../lib/components/atoms/BackButton.svelte'
-  import ImageSlider from '../../lib/components/organisms/ImageSlider.svelte'
+  import { BackButton, ImageSlider } from '$lib/index'
 
   export let data
 </script>
@@ -221,16 +220,5 @@
       font-size: 2.5em;
       margin-bottom: 20px;
     }
-    /* .grid-content {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto;
-      gap: 1rem;
-      width: 100%;
-      grid-template-areas:
-        'item1  item3 item3'
-        'item2  item3 item3'
-        'item2  item3 item3';
-    } */
   }
 </style>

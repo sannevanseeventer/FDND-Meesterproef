@@ -1,7 +1,5 @@
 <script>
-  import BackButton from '../../lib/components/atoms/BackButton.svelte'
-  import SkillBars from '../../lib/components/organisms/SkillBars.svelte'
-  import ArrowAnimation from '../../lib/components/atoms/ArrowAnimation.svelte'
+  import { BackButton, SkillBars, ArrowAnimation } from '$lib/index'
   export let data
 </script>
 

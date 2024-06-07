@@ -1,169 +1,90 @@
 <script>
   export let data
-  import BackButton from '../../lib/components/atoms/BackButton.svelte'
+  import {
+    BackButton,
+    AboutSection,
+    ContactSection,
+    EducationSection,
+    ExperienceSection,
+    SkillSection,
+  } from '$lib/index'
+  import NoTimeImage from '../../lib/components/atoms/NoTimeImage.svelte'
 </script>
 
+<BackButton />
 <section>
   <h1>{data.notimes[0].title}</h1>
-  <BackButton />
-
-  <div class="container">
-    <ul id="cards">
-      <li class="card" id="card1">
-        <div class="card-body">
-          <div class="grid-content">
-            <div class="item1"><h2>Card 1</h2></div>
-            <div class="item2">Item 2</div>
-            <div class="item3">Item 3</div>
-            <div class="item4">Item 4</div>
-          </div>
-        </div>
-      </li>
-      <li class="card" id="card2">
-        <div class="card-body">
-          <div class="grid-content">
-            <div class="item1"><h2>Card 1</h2></div>
-            <div class="item2">Item 2</div>
-            <div class="item3">Item 3</div>
-            <div class="item4">Item 4</div>
-          </div>
-        </div>
-      </li>
-      <li class="card" id="card3">
-        <div class="card-body">
-          <div class="grid-content">
-            <div class="item1"><h2>Card 1</h2></div>
-            <div class="item2">Item 2</div>
-            <div class="item3">Item 3</div>
-            <div class="item4">Item 4</div>
-          </div>
-        </div>
-      </li>
-      <li class="card" id="card4">
-        <div class="card-body">
-          <div class="grid-content">
-            <div class="item1"><h2>Card 1</h2></div>
-            <div class="item2">Item 2</div>
-            <div class="item3">Item 3</div>
-            <div class="item4">Item 4</div>
-          </div>
-        </div>
-      </li>
-    </ul>
+  <span>My resume in one overview</span>
+  <div class="grid-container">
+    <div class="image"><NoTimeImage /></div>
+    <div class="about"><AboutSection /></div>
+    <div class="skill"><SkillSection /></div>
+    <div class="education"><EducationSection /></div>
+    <div class="experience"><ExperienceSection /></div>
+    <div class="contact"><ContactSection /></div>
   </div>
 </section>
 
 <style>
   section {
-    background-color: var(--pink);
+    background-color: var(--darkpurple-background);
     padding: 2rem;
     height: auto;
   }
 
   h1 {
-    color: var(--lightorange);
+    color: var(--lightpink);
     font-size: 3rem;
+    margin-bottom: 1rem;
   }
 
-  :root {
-    --cards: 4;
-    --cardHeight: 87vh;
-    --cardTopPadding: 1.5em;
-    --cardMargin: 4vw;
+  span {
+    color: white;
+    text-transform: none;
+    display: block;
+    margin-bottom: 2rem;
   }
 
-  .container {
-    width: 90%;
-    margin: 0 auto;
-  }
+  /* Media query voor grotere schermen */
+  @media screen and (min-width: 768px) {
+    section {
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 4rem;
+    }
+    span {
+      font-size: 1.5rem;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      column-gap: 15rem;
+      row-gap: 3rem;
+      grid-template-areas:
+        'image about'
+        'skill experience'
+        'education contact';
+    }
 
-  #cards {
-    list-style: none;
-    padding-left: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(var(--cards), var(--cardHeight));
-    gap: var(--cardMargin);
-    padding-bottom: calc(var(--cards) * var(--cardTopPadding));
-    margin-bottom: var(--cardMargin);
-  }
+    .image {
+      grid-area: image;
+    }
 
-  #card1 {
-    --index: 1;
-  }
-  #card2 {
-    --index: 2;
-  }
-  #card3 {
-    --index: 3;
-  }
-  #card4 {
-    --index: 4;
-  }
-
-  .card {
-    position: sticky;
-    top: 0;
-    padding-top: calc(var(--index) * var(--cardTopPadding));
-  }
-
-  #card1 .card-body {
-    background-color: #52b2cf;
-  }
-  #card2 .card-body {
-    background-color: #e5a36f;
-  }
-  #card3 .card-body {
-    background-color: #9cadce;
-  }
-  #card4 .card-body {
-    background-color: #d4afb9;
-  }
-
-  .card-body {
-    box-sizing: border-box;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
-    height: var(--cardHeight);
-    display: flex;
-    flex-direction: column;
-    transition: all 0.5s;
-  }
-
-  .grid-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 10px;
-    width: 100%;
-    grid-template-areas:
-      'item1 item1 item2'
-      'item3 item4 item4';
-  }
-
-  .item1 {
-    grid-area: item1;
-  }
-  .item2 {
-    grid-area: item2;
-  }
-  .item3 {
-    grid-area: item3;
-  }
-  .item4 {
-    grid-area: item4;
-  }
-
-  .grid-content div {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    border-radius: 5px;
-    text-align: left;
-  }
-
-  h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    .about {
+      grid-area: about;
+    }
+    .skill {
+      grid-area: skill;
+    }
+    .education {
+      grid-area: education;
+    }
+    .experience {
+      grid-area: experience;
+    }
+    .contact {
+      grid-area: contact;
+    }
   }
 </style>
