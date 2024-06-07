@@ -1,9 +1,10 @@
-# Online resume
+# Online cv
  
 ## Beschrijving 📃
 Interactief CV/portfolio website als afstudeerproject voor FDND
 
 ![mockup1](https://github.com/sannevanseeventer/FDND-Meesterproef/assets/112857444/474a8571-88b5-4792-8ba6-b0d247af32a4)
+
 ![mockup5](https://github.com/sannevanseeventer/FDND-Meesterproef/assets/112857444/1c6ebc22-7b2f-488c-b302-21a381d81ce6)
 
 
@@ -19,7 +20,6 @@ Interactief CV/portfolio website als afstudeerproject voor FDND
 * Hygraph
 * JS
 * CSS
-* Scroll driven animations
   
 ## Installatie ⚙️
 1. Clone of download deze repository naar de gewenste folder.
