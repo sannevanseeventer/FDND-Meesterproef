@@ -18,9 +18,11 @@
   <div class="grid-container">
     <div class="image"><NoTimeImage /></div>
     <div class="about"><AboutSection /></div>
-    <div class="skill"><SkillSection /></div>
-    <div class="education"><EducationSection /></div>
-    <div class="experience"><ExperienceSection /></div>
+    <div class="skill"><SkillSection skills={data.notimes[0].skills} /></div>
+    <div class="education"><EducationSection education={data.notimes[0].education} /></div>
+    <div class="experience">
+      <ExperienceSection work={data.notimes[0].work} />
+    </div>
     <div class="contact"><ContactSection /></div>
   </div>
 </section>
@@ -45,10 +47,10 @@
     margin-bottom: 2rem;
   }
 
-  /* Media query voor grotere schermen */
+  /* Media query for larger screens */
   @media screen and (min-width: 768px) {
     section {
-      padding: 2rem;
+      padding: 3rem;
     }
     h1 {
       font-size: 4rem;
@@ -59,7 +61,7 @@
     .grid-container {
       display: grid;
       grid-template-columns: 0.5fr 1fr;
-      column-gap: 15rem;
+      column-gap: 13rem;
       row-gap: 3rem;
       grid-template-areas:
         'image about'

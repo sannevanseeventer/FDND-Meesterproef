@@ -8,13 +8,35 @@ export async function load() {
         title
         subtitle
         slug
+        work {
+          ... on Work {
+            id
+            period
+            description
+            function
+            subtitle
+          }
+        }
+        education {
+          ... on Education {
+            id
+            period
+            school
+            study
+          }
+        }
         skills {
-          bar {
-            ... on Bar {
-              name
-              value
-              color {
-                hex
+          ... on NotimeSkill {
+            id
+            subtitle
+            bar {
+              ... on Bar {
+                id
+                name
+                value
+                color {
+                  hex
+                }
               }
             }
           }

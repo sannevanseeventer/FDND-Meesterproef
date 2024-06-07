@@ -130,5 +130,8 @@
       width: 22rem;
       margin-bottom: 0;
     }
+    p {
+      font-size: 1.2rem;
+    }
   }
 </style>

@@ -1,135 +1,104 @@
 <script>
+  export let skills
 </script>
 
 <h2>Skills</h2>
-<h3>Frontend</h3>
-<div class="skillbar">
-  <p class="skillbar-title">HTML</p>
-  <div class="outerbar">
-    <div class="skillbar-bar" style="width: 90%;"></div>
+
+{#each skills as skill (skill.id)}
+  <h3>{skill.subtitle}</h3>
+  <div class="skillbars">
+    {#each skill.bar as bar (bar.id)}
+      <div class="skillbar-container">
+        <p class="skillbar-name">{bar.name}</p>
+        <div class="skillbar-outer">
+          <div
+            class="skillbar-inner"
+            style="width: {bar.value}%; background-color: {bar.color.hex};"
+          ></div>
+        </div>
+      </div>
+    {/each}
   </div>
-</div>
-<div class="skillbar">
-  <p class="skillbar-title">CSS</p>
-  <div class="outerbar">
-    <div class="skillbar-bar" style="width: 80%;"></div>
-  </div>
-</div>
-<div class="skillbar">
-  <p class="skillbar-title">JavaScript</p>
-  <div class="outerbar">
-    <div class="skillbar-bar" style="width: 70%;"></div>
-  </div>
-</div>
-<h3>Design</h3>
-<div class="skillbar">
-  <p class="skillbar-title">HTML</p>
-  <div class="outerbar">
-    <div class="skillbar-bar2" style="width: 90%;"></div>
-  </div>
-</div>
-<div class="skillbar">
-  <p class="skillbar-title">CSS</p>
-  <div class="outerbar">
-    <div class="skillbar-bar2" style="width: 80%;"></div>
-  </div>
-</div>
-<div class="skillbar">
-  <p class="skillbar-title">JavaScript</p>
-  <div class="outerbar">
-    <div class="skillbar-bar2" style="width: 70%;"></div>
-  </div>
-</div>
-<h3>Language</h3>
-<div class="skillbar">
-  <p class="skillbar-title">Nederlands</p>
-  <div class="outerbar">
-    <div class="skillbar-bar3" style="width: 90%;"></div>
-  </div>
-</div>
-<div class="skillbar">
-  <p class="skillbar-title">English</p>
-  <div class="outerbar">
-    <div class="skillbar-bar3" style="width: 80%;"></div>
-  </div>
-</div>
+{/each}
 
 <style>
-  .skillbar {
+  .skillbars {
+    margin-bottom: 2rem;
+  }
+  .skillbar-container {
     margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 
-  .outerbar {
+  .skillbar-name {
+    width: 100px;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  .skillbar-outer {
+    flex-grow: 1;
     height: 20px;
-    background-color: #27072e;
+    background-color: var(--darkpurple-bar);
     border-radius: 5px;
-    overflow: hidden; /* Ensures the inner bar is clipped to the outer bar */
+    overflow: hidden;
+    margin-bottom: 0;
+    margin-top: 1rem;
   }
 
-  .skillbar-bar {
+  .skillbar-inner {
     height: 60%;
     margin: 4px;
     border-radius: 3px;
-    background-color: var(--lightpink);
-    transition: width 0.5s;
-  }
-
-  .skillbar-bar2 {
-    height: 60%;
-    margin: 4px;
-    border-radius: 3px;
-    background-color: var(--berry);
-    transition: width 0.5s;
-  }
-  .skillbar-bar3 {
-    height: 60%;
-    margin: 4px;
-    border-radius: 3px;
-    background-color: var(--orange);
     transition: width 0.5s;
   }
 
   h2 {
     color: var(--lightorange);
     text-transform: none;
+    margin-top: 3rem;
+    font-size: 2rem;
   }
+
   h3 {
     color: var(--yellow);
     text-transform: uppercase;
-    margin-top: 2rem;
   }
-  p {
-    font-size: 1rem;
-    margin-bottom: 5px;
-    margin-top: 0.5rem;
-  }
+
   @media screen and (min-width: 678px) {
+    .skillbars {
+      margin-bottom: 4rem;
+    }
+
+    .skillbar-container {
+      gap: 6rem;
+    }
+
     h2 {
       font-size: 3rem;
       margin-top: 0;
     }
-    p {
+
+    .skillbar-name {
       font-size: 1.3rem;
     }
-    .outerbar {
-      height: 50px;
-      background-color: var(--darkpurple-bar);
+
+    .skillbar-outer {
+      height: 40px;
       border-radius: 5px;
-      margin-bottom: 1.5rem;
-      overflow: hidden; /* Ensures the inner bar is clipped to the outer bar */
+      overflow: hidden;
     }
-    .skillbar-bar {
-      margin: 10px;
+
+    .skillbar-inner {
+      margin: 8px;
     }
-    .skillbar-bar2 {
-      margin: 10px;
-    }
-    .skillbar-bar3 {
-      margin: 10px;
-    }
+
     h3 {
       font-size: 1.5rem;
-      margin-bottom: 2rem;
     }
   }
 </style>

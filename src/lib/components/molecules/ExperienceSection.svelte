@@ -1,59 +1,27 @@
 <script>
+  export let work
 </script>
 
 <h2>Experience</h2>
 
-<div class="wrapper">
-  <h3>Frontend Developer</h3>
-  <span>2022-2024</span>
-</div>
-<p>GRRR Amsterdam</p>
-<p class="description">
-  During my internship at GRRR, I learned al lot while working in a team with other developers.
-  Responsibilities: making flexible components, using React, Typescript and Wordpress Headless CMS.
-</p>
-
-<div class="wrapper">
-  <h3>Frontend Developer</h3>
-  <span>2022-2024</span>
-</div>
-<p>GRRR Amsterdam</p>
-<p class="description">
-  During my internship at GRRR, I learned al lot while working in a team with other developers.
-  Responsibilities: making flexible components, using React, Typescript and Wordpress Headless CMS.
-</p>
-
-<div class="wrapper">
-  <h3>Frontend Developer</h3>
-  <span>2022-2024</span>
-</div>
-<p>GRRR Amsterdam</p>
-<p class="description">
-  During my internship at GRRR, I learned al lot while working in a team with other developers.
-  Responsibilities: making flexible components, using React, Typescript and Wordpress Headless CMS.
-</p>
-
-<div class="wrapper">
-  <h3>Frontend Developer</h3>
-  <span>2022-2024</span>
-</div>
-<p>GRRR Amsterdam</p>
-<p class="description">
-  During my internship at GRRR, I learned al lot while working in a team with other developers.
-  Responsibilities: making flexible components, using React, Typescript and Wordpress Headless CMS.
-</p>
-
-<div class="wrapper">
-  <h3>Frontend Developer</h3>
-  <span>2022-2024</span>
-</div>
-<p>GRRR Amsterdam</p>
-<p class="description">
-  During my internship at GRRR, I learned al lot while working in a team with other developers.
-  Responsibilities: making flexible components, using React, Typescript and Wordpress Headless CMS.
-</p>
+{#each work as job}
+  <div class="work">
+    <div class="wrapper">
+      <h3>{job.function}</h3>
+      <span>{job.period}</span>
+    </div>
+    <p class="work-place">{job.subtitle}</p>
+    <p class="description">{job.description}</p>
+  </div>
+{/each}
 
 <style>
+  .wrapper {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+  }
   h2 {
     color: var(--lightorange);
     text-transform: none;
@@ -62,17 +30,25 @@
   span {
     color: var(--coral);
     font-size: 1.2rem;
-    padding-bottom: 1rem;
   }
   h3 {
     color: var(--yellow);
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
   }
   p {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    margin-top: 0.6rem;
+    color: white;
   }
+  .work-place {
+    color: var(--lightpink);
+    margin-bottom: 0;
+  }
+
+  .work {
+    margin-bottom: 2rem;
+  }
+
   @media screen and (min-width: 678px) {
     h2 {
       font-size: 3rem;
@@ -91,17 +67,13 @@
       line-height: 1.5;
       color: white;
     }
-    .wrapper {
-      display: flex;
-      justify-content: left;
-      align-items: center;
-      gap: 1rem;
-    }
+
     span {
       padding-bottom: 0;
     }
     h3 {
       margin-bottom: 0;
+      font-size: 1.5rem;
     }
   }
 </style>
