@@ -24,8 +24,8 @@
     width: 2500px;
     height: 2500px;
     position: relative;
-    background-image: url('CV-background.svg'); /* see background local  */
-    /* background-image: url("/static/CV-background.svg"); */
+    /* background-image: url('CV-background.svg'); see background local */
+    background-image: url('/static/CV-background.svg');
     background-size: cover;
     background-repeat: no-repeat;
   }
