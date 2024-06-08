@@ -113,11 +113,6 @@
     border: none;
   }
 
-  button:hover {
-    background-color: var(--pink);
-    transition: 0.3s;
-  }
-
   .menu,
   .info {
     padding: 0.5rem 1.5rem;
@@ -141,9 +136,5 @@
   .show-info {
     width: 3rem;
     height: 3rem;
-  }
-
-  a:hover {
-    color: var(--lightpink);
   }
 </style>

@@ -31,7 +31,6 @@
   section {
     background-color: var(--darkpurple-background);
     padding: 2rem;
-    width: 100%;
     height: auto;
   }
 

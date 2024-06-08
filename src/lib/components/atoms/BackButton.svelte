@@ -21,9 +21,4 @@
     text-decoration: none;
     cursor: pointer;
   }
-
-  a:hover {
-    background-color: var(--pink);
-    transition: 0.3s;
-  }
 </style>
