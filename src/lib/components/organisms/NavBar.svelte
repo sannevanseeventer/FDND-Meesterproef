@@ -58,22 +58,20 @@
   })
 </script>
 
-<section>
-  <nav>
-    <ul class="menu">
-      {#each data.pages as page}
-        <li><a href={page.url}>{page.title}</a></li>
-      {/each}
-    </ul>
-    <div class="info hidden">
-      <p>Scroll through the map and explore my resume</p>
-    </div>
-    <div class="button-container">
-      <button class="show-info hidden">?</button>
-      <button class="show-links hidden">menu</button>
-    </div>
-  </nav>
-</section>
+<nav>
+  <ul class="menu">
+    {#each data.pages as page}
+      <li><a href={page.url}>{page.title}</a></li>
+    {/each}
+  </ul>
+  <div class="info hidden">
+    <p>Scroll through the map and explore my resume</p>
+  </div>
+  <div class="button-container">
+    <button class="show-info hidden">?</button>
+    <button class="show-links hidden">menu</button>
+  </div>
+</nav>
 
 <style>
   nav {
