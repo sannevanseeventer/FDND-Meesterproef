@@ -17,7 +17,7 @@
   })
 </script>
 
-<div class="wrap">
+<div class="arrow-container-right">
   <svg
     id="arrow"
     class="arrow animated bounce"
@@ -37,8 +37,9 @@
     display: none;
   }
 
-  @media screen and (min-width: 768px) {
-    .wrap {
+  /* full screen */
+  @media screen and (min-width: 48em) {
+    .arrow-container-right {
       bottom: 0;
       left: 0;
     }
@@ -49,7 +50,7 @@
       display: block;
     }
 
-    .wrap svg {
+    .arrow-container-right svg {
       left: 0;
       bottom: 0;
       margin: 1.5rem 2rem;
@@ -64,6 +65,7 @@
       transform-origin: 50% 50%;
     }
 
+    /* animation */
     @keyframes bounce {
       0% {
         transform: translateX(0);
@@ -75,13 +77,13 @@
         transform: translateX(0);
       }
       22.22222% {
-        transform: translateX(15px); /* Move right first */
+        transform: translateX(15px);
       }
       27.77778% {
         transform: translateX(0);
       }
       33.33333% {
-        transform: translateX(15px); /* Move right again */
+        transform: translateX(15px);
       }
       44.44444% {
         transform: translateX(0);

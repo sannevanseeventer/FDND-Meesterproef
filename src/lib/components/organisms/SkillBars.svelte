@@ -48,7 +48,7 @@
   }
 
   .skill {
-    margin-bottom: 10px;
+    margin-bottom: 0.6rem;
   }
 
   p {
@@ -57,7 +57,8 @@
     margin-top: 0.5rem;
   }
 
-  @media screen and (min-width: 768px) {
+  /* full screen */
+  @media screen and (min-width: 48em) {
     .skills-container {
       display: inline-block;
       vertical-align: top;

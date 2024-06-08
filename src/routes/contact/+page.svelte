@@ -86,7 +86,7 @@
     </div>
 
     <div class="image-container">
-      <img src="Untitled2.svg" alt="contact" />
+      <img src="contact-image.svg" alt="illustration with multiple objects" />
     </div>
   </div>
 </section>
@@ -146,7 +146,9 @@
   .image-container {
     display: none;
   }
-  @media screen and (min-width: 768px) {
+
+  /* full screen */
+  @media screen and (min-width: 48em) {
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;

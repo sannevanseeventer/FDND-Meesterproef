@@ -69,7 +69,8 @@
     text-transform: uppercase;
   }
 
-  @media screen and (min-width: 678px) {
+  /* full screen */
+  @media screen and (min-width: 42.4em) {
     .skillbars {
       margin-bottom: 4rem;
     }

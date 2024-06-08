@@ -1,23 +1,23 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount } from 'svelte'
   onMount(() => {
-    const arrow = document.querySelector(".arrow");
-    const skillsContainer = document.querySelector(".skills-container");
+    const arrow = document.querySelector('.arrow')
+    const skillsContainer = document.querySelector('.skills-container')
 
     const handleScroll = () => {
-      const scrollLeft = skillsContainer.scrollLeft;
-      arrow.style.opacity = Math.max(1 - scrollLeft / 250, 0);
-    };
+      const scrollLeft = skillsContainer.scrollLeft
+      arrow.style.opacity = Math.max(1 - scrollLeft / 250, 0)
+    }
 
-    skillsContainer.addEventListener("scroll", handleScroll);
+    skillsContainer.addEventListener('scroll', handleScroll)
 
     return () => {
-      skillsContainer.removeEventListener("scroll", handleScroll);
-    };
-  });
+      skillsContainer.removeEventListener('scroll', handleScroll)
+    }
+  })
 </script>
 
-<div class="wrap">
+<div class="arrow-container">
   <svg
     id="arrow"
     class="arrow animated bounce"
@@ -37,8 +37,9 @@
     display: none;
   }
 
-  @media screen and (min-width: 768px) {
-    .wrap {
+  /* full screen */
+  @media screen and (min-width: 48em) {
+    .arrow-container {
       bottom: 0;
       left: 0;
     }
@@ -49,7 +50,7 @@
       display: block;
     }
 
-    .wrap svg {
+    .arrow-container svg {
       left: 0;
       bottom: 0;
       margin: 1.5rem 2rem;
@@ -64,6 +65,7 @@
       transform-origin: 50% 50%;
     }
 
+    /* animation */
     @keyframes bounce {
       0% {
         transform: translateX(0);
@@ -75,13 +77,13 @@
         transform: translateX(0);
       }
       22.22222% {
-        transform: translateX(15px); /* Move right first */
+        transform: translateX(15px);
       }
       27.77778% {
         transform: translateX(0);
       }
       33.33333% {
-        transform: translateX(15px); /* Move right again */
+        transform: translateX(15px);
       }
       44.44444% {
         transform: translateX(0);

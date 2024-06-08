@@ -26,7 +26,8 @@
     margin-bottom: 6rem;
   }
 
-  @media screen and (min-width: 768px) {
+  /* full screen */
+  @media screen and (min-width: 48em) {
     section {
       height: 100vh;
     }

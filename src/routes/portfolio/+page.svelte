@@ -84,7 +84,7 @@
 
   .label {
     padding: 0.2rem 1rem;
-    border-radius: 5px;
+    border-radius: 0.3rem;
     margin: 0;
   }
 
@@ -93,7 +93,8 @@
     margin-bottom: 4rem;
   }
 
-  @media screen and (min-width: 546px) {
+  /* medium screen */
+  @media screen and (min-width: 34.2rem) {
     :root {
       --cards: 3;
       --cardHeight: 80vh;
@@ -130,10 +131,6 @@
     #card3 {
       --index: 3;
     }
-    /* 
-    #card4 {
-      --index: 4;
-    } */
 
     .card {
       position: sticky;
@@ -157,9 +154,8 @@
     .card-body {
       box-sizing: border-box;
       padding: 2rem;
-      border-radius: 20px;
+      border-radius: 1.25rem;
       box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
-      /* height: var(--cardHeight); */
       display: flex;
       flex-direction: column;
       transition: all 0.5s;
@@ -192,7 +188,7 @@
     }
 
     .grid-content div {
-      border-radius: 10px;
+      border-radius: 0.6rem;
       text-align: left;
     }
 
@@ -202,13 +198,13 @@
 
     h2 {
       font-size: 1.5em;
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
     }
     img {
       object-fit: cover;
       width: 100%;
       height: 100%;
-      border-radius: 10px;
+      border-radius: 0.6rem;
     }
     p {
       margin-bottom: 1rem;
@@ -216,10 +212,12 @@
       font-size: 1.2rem;
     }
   }
-  @media screen and (min-width: 768px) {
+
+  /* full screen */
+  @media screen and (min-width: 48em) {
     h2 {
       font-size: 2.5em;
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
     }
   }
 </style>

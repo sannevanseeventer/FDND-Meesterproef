@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <section>
   <h2>About</h2>
   <p>
@@ -20,12 +17,13 @@
     font-size: 1.2rem;
   }
 
-  @media screen and (min-width: 678px) {
+  @media screen and (min-width: 42.4em) {
     h2 {
       font-size: 3rem;
     }
     p {
       font-size: 1.9rem;
+      max-width: 38rem;
     }
   }
 </style>

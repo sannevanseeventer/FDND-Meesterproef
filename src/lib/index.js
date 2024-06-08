@@ -21,4 +21,4 @@ export { default as NavBar } from '$lib/components/organisms/NavBar.svelte'
 export { default as SkillBars } from '$lib/components/organisms/SkillBars.svelte'
 
 // Pages
-export { default as Homepage2 } from '$lib/components/pages/Homepage2.svelte'
+export { default as Homepage } from '$lib/components/pages/Homepage.svelte'

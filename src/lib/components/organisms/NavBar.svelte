@@ -94,7 +94,7 @@
     display: flex;
     justify-content: right;
     flex-direction: row;
-    gap: 0.5rem;
+    gap: 0.6rem;
   }
 
   button {
@@ -109,6 +109,7 @@
     padding: 0.5rem 1rem;
     border-radius: 0.8rem;
     background-color: var(--darkpurple);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     cursor: pointer;
     border: none;
@@ -116,6 +117,7 @@
 
   button:hover {
     background-color: var(--pink);
+    transition: 0.3s;
   }
 
   .menu,
@@ -125,6 +127,7 @@
     background-color: var(--darkpurple);
     text-decoration: none;
     margin-bottom: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
 
   p {
@@ -140,5 +143,9 @@
   .show-info {
     width: 3rem;
     height: 3rem;
+  }
+
+  a:hover {
+    color: var(--lightpink);
   }
 </style>

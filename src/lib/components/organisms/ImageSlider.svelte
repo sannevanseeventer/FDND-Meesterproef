@@ -1,5 +1,5 @@
 <script>
-  export let images;
+  export let images
 </script>
 
 <div class="image-container-wrapper">
@@ -39,9 +39,9 @@
   img {
     overflow: hidden;
     flex-shrink: 0;
-    width: 235px;
-    height: 180px;
-    border-radius: 10px;
+    width: 14.7rem;
+    height: 11.3rem;
+    border-radius: 0.6rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     scroll-snap-align: start;
   }

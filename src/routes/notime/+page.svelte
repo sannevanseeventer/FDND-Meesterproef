@@ -31,6 +31,7 @@
   section {
     background-color: var(--darkpurple-background);
     padding: 2rem;
+    width: 100%;
     height: auto;
   }
 
@@ -47,11 +48,8 @@
     margin-bottom: 2rem;
   }
 
-  /* Media query for larger screens */
-  @media screen and (min-width: 768px) {
-    section {
-      padding: 3rem;
-    }
+  /* medium screen */
+  @media screen and (min-width: 56.3em) {
     h1 {
       font-size: 4rem;
     }
@@ -61,7 +59,7 @@
     .grid-container {
       display: grid;
       grid-template-columns: 0.5fr 1fr;
-      column-gap: 13rem;
+      column-gap: 2rem;
       row-gap: 3rem;
       grid-template-areas:
         'image about'
@@ -87,6 +85,16 @@
     }
     .contact {
       grid-area: contact;
+    }
+
+    /* full screen */
+    @media screen and (min-width: 75em) {
+      section {
+        padding: 3rem;
+      }
+      .grid-container {
+        column-gap: 12rem;
+      }
     }
   }
 </style>

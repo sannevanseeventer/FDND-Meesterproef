@@ -1,8 +1,8 @@
 <script>
-  import { NavBar, Homepage2 } from '$lib/index'
+  import { NavBar, Homepage } from '$lib/index'
 
   export let data
 </script>
 
 <NavBar {data} />
-<Homepage2 {data} />
+<Homepage {data} />

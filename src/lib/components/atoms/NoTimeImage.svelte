@@ -2,16 +2,16 @@
 
 <style>
   img {
-    width: 150px;
-    height: 150px;
+    width: 9.4rem;
+    height: 9.4rem;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 0.6rem;
     margin-top: 2rem;
   }
-  @media screen and (min-width: 678px) {
+  @media screen and (min-width: 48em) {
     img {
-      width: 600px;
-      height: 300px;
+      width: 37.5rem;
+      height: 18.7rem;
       object-fit: cover;
       margin-top: 3rem;
     }

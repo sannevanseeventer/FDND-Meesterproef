@@ -1,7 +1,6 @@
 <script>
   export let data
   import { BackButton, ArrowAnimationRight } from '$lib/index'
-  console.log(data)
 </script>
 
 <BackButton />
@@ -97,7 +96,7 @@
     margin-bottom: 3rem;
   }
 
-  @media screen and (min-width: 462px) {
+  @media screen and (min-width: 29em) {
     section {
       height: 100vh;
     }
@@ -112,7 +111,6 @@
       width: 200vw;
       display: flex;
       margin-top: 4rem;
-      /* align-items: center; */
     }
     .rectangle {
       display: none;

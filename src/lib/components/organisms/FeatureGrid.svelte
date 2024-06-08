@@ -27,8 +27,8 @@
 
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(11, 1fr);
     gap: 1rem;
     margin-bottom: 4rem;
     grid-auto-flow: dense;
@@ -46,6 +46,7 @@
       '. feature12 feature12';
   }
 
+  /* scroll driven animation */
   @supports (animation-timeline: scroll()) {
     @keyframes slide-fade-in {
       from {
@@ -66,22 +67,21 @@
   li {
     padding: 0.8rem 1rem;
     color: var(--white);
-    border-radius: 10px;
+    border-radius: 0.6rem;
     font-size: 1.5rem;
     text-align: center;
     text-transform: uppercase;
   }
 
   img {
-    width: 190px;
-    height: 125px;
+    width: 11.9rem;
+    height: 7.8rem;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 0.6rem;
   }
 
   .picture {
     grid-area: picture;
-    /* background-color: var(--midpurple); */
     padding: 0;
   }
 
@@ -140,7 +140,8 @@
     background-color: var(--lightpink);
   }
 
-  @media screen and (min-width: 768px) {
+  /* full screen */
+  @media screen and (min-width: 48em) {
     .container {
       width: 100%;
       column-gap: 4rem;
@@ -151,10 +152,10 @@
       font-size: 2rem;
     }
     img {
-      width: 430px;
-      height: 200px;
+      width: 26.9rem;
+      height: 12.5rem;
       object-fit: cover;
-      border-radius: 5px;
+      border-radius: 0.6rem;
     }
     .picture {
       padding: 0;

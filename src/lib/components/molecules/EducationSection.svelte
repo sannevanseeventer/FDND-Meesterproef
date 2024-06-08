@@ -5,7 +5,7 @@
 <h2>Education</h2>
 
 {#each education as school}
-  <div class="wrapper">
+  <div class="education-container">
     <span class="education-period">{school.period}</span>
     <h3 class="education-school">{school.school}</h3>
   </div>
@@ -33,20 +33,22 @@
     margin-top: 0.5rem;
     font-size: 1.2rem;
   }
-  @media screen and (min-width: 678px) {
-    .wrapper {
+
+  /* full screen */
+  @media screen and (min-width: 42.4em) {
+    .education-container {
       display: flex;
       align-items: center;
-      flex-direction: row; /* default direction, can be omitted */
+      flex-direction: row;
       gap: 1rem;
     }
 
     .education-period {
-      order: 2; /* This item will appear second */
+      order: 2;
     }
 
     .education-school {
-      order: 1; /* This item will appear first */
+      order: 1;
     }
     h2 {
       font-size: 3rem;

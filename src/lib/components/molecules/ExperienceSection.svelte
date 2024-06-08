@@ -5,18 +5,18 @@
 <h2>Experience</h2>
 
 {#each work as job}
-  <div class="work">
-    <div class="wrapper">
+  <div class="work-container">
+    <div class="work-container-job">
       <h3>{job.function}</h3>
       <span>{job.period}</span>
     </div>
     <p class="work-place">{job.subtitle}</p>
-    <p class="description">{job.description}</p>
+    <p class="work-description">{job.description}</p>
   </div>
 {/each}
 
 <style>
-  .wrapper {
+  .work-container-job {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -45,11 +45,12 @@
     margin-bottom: 0;
   }
 
-  .work {
+  .work-container {
     margin-bottom: 2rem;
   }
 
-  @media screen and (min-width: 678px) {
+  /* full screen */
+  @media screen and (min-width: 42.4em) {
     h2 {
       font-size: 3rem;
       margin-top: 0;
@@ -59,7 +60,7 @@
       margin-bottom: 0.5rem;
       color: var(--pink);
     }
-    .description {
+    .work-description {
       font-size: 1.3rem;
       margin-top: 0;
       margin-bottom: 2rem;

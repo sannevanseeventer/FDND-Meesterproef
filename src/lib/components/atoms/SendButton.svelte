@@ -14,7 +14,7 @@
 
 <style>
   svg {
-    height: 30px;
+    height: 1.9rem;
     width: auto;
     transition: transform 0.3s ease;
   }
