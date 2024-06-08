@@ -21,72 +21,76 @@
 <section>
   <h1>{data.contacts[0].title}</h1>
 
-  <div class="contact-container">
-    <h2>Lets create together and hit me up!</h2>
-    <!-- Progressive enhanced form -->
-    <form action="/contact" method="POST" use:enhance={handleForm}>
-      <fieldset>
-        <label>
-          <input
-            type="text"
-            name="name"
-            minlength="2"
+  <div class="contact-grid">
+    <div class="contact-container">
+      <h2>Lets create together and hit me up!</h2>
+      <!-- Progressive enhanced form -->
+      <form action="/contact" method="POST" use:enhance={handleForm}>
+        <fieldset>
+          <label>
+            <input
+              type="text"
+              name="name"
+              minlength="2"
+              required
+              value={form?.name ?? ''}
+              placeholder="Name"
+              autocomplete="name"
+            />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <label>
+            <input
+              type="email"
+              name="email"
+              required
+              value={form?.email ?? ''}
+              placeholder="Email"
+              autocomplete="email"
+            />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <label for="comment" class="medium-body"></label>
+          <textarea
+            name="comment"
+            id="comment"
+            rows="5"
             required
-            value={form?.name ?? ''}
-            placeholder="Name"
-            autocomplete="name"
-          />
-        </label>
-      </fieldset>
+            value={form?.comment ?? ''}
+            placeholder="Message"
+            autocomplete="off"
+          ></textarea>
+        </fieldset>
 
-      <fieldset>
-        <label>
-          <input
-            type="email"
-            name="email"
-            required
-            value={form?.email ?? ''}
-            placeholder="Email"
-            autocomplete="email"
-          />
-        </label>
-      </fieldset>
+        <SendButton />
 
-      <fieldset>
-        <label for="comment" class="medium-body"></label>
-        <textarea
-          name="comment"
-          id="comment"
-          rows="5"
-          required
-          value={form?.comment ?? ''}
-          placeholder="Message"
-          autocomplete="off"
-        ></textarea>
-      </fieldset>
+        <!-- <FormLoader /> -->
+        {#if loading}
+          <FormLoader />
+        {/if}
 
-      <SendButton />
+        <!-- Message when it's send /> -->
+        {#if form?.success}
+          <p role="alert" class:active={form?.success}>Thank you for your message!</p>
+        {/if}
 
-      <!-- <FormLoader /> -->
-      {#if loading}
-        <FormLoader />
-      {/if}
+        <!-- Message when it failed /> -->
+        {#if form?.error}
+          <p role="alert" class="message fail">{form.message}</p>
+        {/if}
+      </form>
+    </div>
 
-      <!-- Message when it's send /> -->
-      {#if form?.success}
-        <p role="alert" class:active={form?.success}>Thank you for your message!</p>
-      {/if}
-
-      <!-- Message when it failed /> -->
-      {#if form?.error}
-        <p role="alert" class="message fail">{form.message}</p>
-      {/if}
-    </form>
-    <div class="background-image"></div>
+    <div class="image-container">
+      <img src="Untitled2.svg" alt="contact" />
+    </div>
   </div>
-
-  <BackButton />
 </section>
+<BackButton />
 
 <style>
   h1 {
@@ -139,13 +143,36 @@
     height: 100vh;
   }
 
+  .image-container {
+    display: none;
+  }
   @media screen and (min-width: 768px) {
-    form {
-      width: 40%;
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
     }
 
     .contact-container {
-      margin: 5rem auto;
+      grid-column: 1 / 2;
+      width: 90%;
+    }
+
+    .image-container {
+      display: block;
+      grid-column: 2 / 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
     }
   }
 </style>

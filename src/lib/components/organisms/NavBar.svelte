@@ -114,6 +114,10 @@
     border: none;
   }
 
+  button:hover {
+    background-color: var(--pink);
+  }
+
   .menu,
   .info {
     padding: 0.5rem 1.5rem;

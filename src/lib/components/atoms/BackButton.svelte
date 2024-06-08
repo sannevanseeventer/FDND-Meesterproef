@@ -23,4 +23,8 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  a:hover {
+    background-color: var(--pink);
+  }
 </style>

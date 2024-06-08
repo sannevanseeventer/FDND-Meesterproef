@@ -213,6 +213,7 @@
     p {
       margin-bottom: 1rem;
       max-width: 25em;
+      font-size: 1.2rem;
     }
   }
   @media screen and (min-width: 768px) {
