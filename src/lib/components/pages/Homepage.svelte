@@ -26,6 +26,7 @@
     position: relative;
     /* background-image: url('CV-background.svg'); */
     background-image: url('/static/CV-background.svg');
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
   }
