@@ -17,7 +17,7 @@
     height: 100%;
     width: 100%;
     overflow: auto;
-    position: relative;
+    position: absolute;
     z-index: 999;
   }
   .map {
