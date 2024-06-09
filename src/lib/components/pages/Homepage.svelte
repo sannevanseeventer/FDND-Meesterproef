@@ -14,16 +14,17 @@
 
 <style>
   .map-container {
-    height: 100%;
-    width: 100%;
-    overflow: auto;
+    height: 100vh; /* Zorgt ervoor dat de container de volledige hoogte van het scherm vult */
+    width: 100vw; /* Zorgt ervoor dat de container de volledige breedte van het scherm vult */
+    overflow: auto; /* Voorkomt dat de inhoud buiten de container wordt getoond */
     position: relative;
     z-index: 999;
   }
+
   .map {
     width: 2500px;
     height: 2500px;
-    position: relative;
+    position: absolute; /* Zorgt ervoor dat de map relatief aan de container gepositioneerd wordt */
     /* background-image: url('CV-background.svg'); */
     background-image: url('/static/CV-background.svg');
     background-size: cover;
