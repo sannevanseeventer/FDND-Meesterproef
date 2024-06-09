@@ -17,13 +17,13 @@
     height: 100%;
     width: 100%;
     overflow: auto;
-    /* position: absolute; */
+    position: fixed;
     z-index: 999;
   }
   .map {
     width: 2500px;
     height: 2500px;
-    position: absolute;
+    position: relative;
     /* background-image: url('CV-background.svg'); */
     background-image: url('/static/CV-background.svg');
     background-size: cover;
