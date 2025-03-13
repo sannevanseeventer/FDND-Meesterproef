@@ -1,7 +1,7 @@
 <section>
   <h2>About</h2>
   <p>
-    Hi there! Sanne here, a 27-year-old frontend developer and graphic designer. I am eager to learn
+    Hi there! Sanne here, a 28-year-old frontend developer and graphic designer. I am eager to learn
     and positively perfectionistic, always striving for excellence in my work.
   </p>
 </section>
