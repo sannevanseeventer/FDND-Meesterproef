@@ -5,7 +5,7 @@
   <ul class="container">
     <li class="picture grid-item"><img src="sannevanseeventer2.webp" alt="Sanne" /></li>
     <li class="feature1 grid-item">Sanne van Seeventer</li>
-    <li class="feature2 grid-item">27</li>
+    <li class="feature2 grid-item">28</li>
     <li class="feature3 grid-item">Amsterdam</li>
     <li class="feature4 grid-item"></li>
     <li class="feature5 grid-item">Creative</li>
