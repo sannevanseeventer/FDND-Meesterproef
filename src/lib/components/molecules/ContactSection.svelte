@@ -34,9 +34,9 @@
   </li>
   <li>
     <a
-      href="sannevanseeventer-resume.pdf"
+      href="sannevanseeventer-resume2.pdf"
       class="download-button"
-      download="sannevanseeventer-resume.pdf"
+      download="sannevanseeventer-resume2.pdf"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
         ><path
